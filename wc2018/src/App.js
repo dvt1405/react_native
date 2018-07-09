@@ -13,66 +13,9 @@ import {
   Image,
   ImageBackground
 } from 'react-native';
-
-const matches = [
-  {
-    team1: 'Uruguay',
-    team2: 'France',
-    flag1: require('./img/uruguay.png'),
-    flag2: require('./img/france.png'),
-    date: 'jul 6 2018 - 21:00'
-  },
-  {
-    team1: 'Brazil',
-    team2: 'Belgium',
-    flag1: require('./img/brazil.png'),
-    flag2: require('./img/belgium.png'),
-    date: 'jul 7 2018 - 1:00'
-  },
-  {
-    team1: 'Russia',
-    team2: 'Croatia',
-    flag1: require('./img/russia.png'),
-    flag2: require('./img/croatia.png'),
-    date: 'jul 7 2018 - 21:00'
-  },
-  {
-    team1: 'England',
-    team2: 'Germany',
-    flag1: require('./img/england.png'),
-    flag2: require('./img/germany.png'),
-    date: 'jul 8 2018 - 1:00'
-  }
-]
+import Schedule from './Schedule'
 export default class App extends Component {
   render() {
-    const match = matches.map((match, index) =>
-      <View
-        style={styles.matchView}
-        key={index}
-      >
-        <View
-          style={styles.matchDateView}
-        >
-          <Text> {match.date} </Text>
-        </View>
-        <View
-          style={styles.match}
-        >
-          <Text style={styles.matchIcon1}>{match.team1}</Text>
-          <Image
-            source={match.flag1}
-            style={styles.matchIconFlag}
-          />
-          <Text>vs</Text>
-          <Image
-            source={match.flag2}
-            style={styles.matchIconFlag}
-          />
-          <Text style={styles.matchIcon2}>{match.team2}</Text>
-        </View>
-      </View>
-    )
     return (
       <ImageBackground
         style={styles.container}
@@ -87,7 +30,9 @@ export default class App extends Component {
             style={styles.headerLogo}
           />
         </View>
-        {match}
+        <Schedule 
+          textProps= 'Quali-Final'
+        />
       </ImageBackground>
     );
   }
@@ -108,13 +53,13 @@ const styles = StyleSheet.create({
   headerText: {
     fontSize: 25,
     color: '#CBCECC',
-    marginBottom:50,
+    marginBottom:20,
 
   },
   headerLogo: {
     width: 80,
     height: 150,
-    opacity: 0.33,
+    opacity: 0,
     marginBottom: 40
   },
   matchView: {
