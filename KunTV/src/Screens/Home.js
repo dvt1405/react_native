@@ -8,17 +8,32 @@ import {
     Image,
     ImageBackground,
     TouchableOpacity,
-    WebView
+    FlatList
 } from 'react-native';
+import { data } from '../database/data.json';
+import Item from '../components/Item';
 class Home extends Component {
 
-    state = {}
+    state = {
+
+    }
+    _renderItem = ({ item }) => (<View>
+        <Item 
+            data ={item}
+
+        />
+    </View>)
+    _keyExtractor = (item, index) => item.id
     render() {
         return (
-            <WebView
-                source={{ uri: 'https://instagram.com' }}
-                style={{ marginTop: 20 }}
-            />
+            <View>
+                <FlatList
+                    data={data}
+                    extraData= {data}
+                    renderItem={this._renderItem}
+                    keyExtractor={this._keyExtractor}
+                />
+            </View>
         );
     }
 }

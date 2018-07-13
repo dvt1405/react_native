@@ -21,6 +21,7 @@ import { YellowBox } from 'react-native';
 YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader'])
 import LoginFrm from './Screens/Home'
 import {HomeStack} from './StackNavigator'
+import Home from './Screens/Home'
 export default class App extends Component {
   render() {
     return (

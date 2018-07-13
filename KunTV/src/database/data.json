@@ -1,0 +1,40 @@
+{
+    "data": [
+        {
+            "id" : "1",
+            "logo": "https://image.vtc.vn/files/chubi/2017/04/19/cuoc-doi-thang-tram-cua-nam-tai-tu-vuot-nguc-16525010.jpg",
+            "brand": "Fox",
+            "address": "Ha noi - Viet Nam",
+            "kind": "Movie",
+            "rate": 1,
+            "distance": "0.23"
+        },
+        {
+            "id" : "2",
+            "logo": "https://image.vtc.vn/files/chubi/2017/04/19/cuoc-doi-thang-tram-cua-nam-tai-tu-vuot-nguc-16525010.jpg",
+            "brand": "Star",
+            "address":  "Ha noi - Viet Nam",
+            "kind": "Movie",
+            "rate": 2,
+            "distance": "0.23"
+        },
+        {
+            "id" : "3",
+            "logo": "https://image.vtc.vn/files/chubi/2017/04/19/cuoc-doi-thang-tram-cua-nam-tai-tu-vuot-nguc-16525010.jpg",
+            "brand": "HBO",
+            "address":  "Ha noi - Viet Nam",
+            "kind": "Movie",
+            "rate": 3,
+            "distance": "0.23"
+        },
+        {
+            "id" : "4",
+            "logo": "https://image.vtc.vn/files/chubi/2017/04/19/cuoc-doi-thang-tram-cua-nam-tai-tu-vuot-nguc-16525010.jpg",
+            "brand": "VTV",
+            "address":  "Ha noi - Viet Nam",
+            "kind": "Movie",
+            "rate": 4,
+            "distance": "0.23"
+        }
+    ]
+}
