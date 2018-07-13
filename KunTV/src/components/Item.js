@@ -13,15 +13,15 @@ class Item extends Component {
     state = {}
     render() {
         return (
-            <View
+            <TouchableOpacity
                 style={styles.container}
             >
-                <TouchableOpacity style={styles.logoView}>
+                <View style={styles.logoView}>
                     <Image
                         style={styles.image}
                         source={{ uri: this.props.data.logo }}
                     />
-                </TouchableOpacity>
+                </View>
                 <View style={styles.textView}>
                     <View style={styles.headerView}>
                         <Text style={styles.brandText} >{this.props.data.brand}</Text>
@@ -34,10 +34,10 @@ class Item extends Component {
                     >
                         <RatingBar data={this.props.data} />
                         <Text style={styles.kindText}>{this.props.data.kind}</Text>
-                        <Text style={{ flex: 1, color: '#AAACB1' }}>{this.props.data.distance} mile</Text>
+                        <Text style={{ flex: 1, color: '#AAACB1' }}>{this.props.data.distance} miles</Text>
                     </View>
                 </View>
-            </View >
+            </TouchableOpacity >
         );
     }
 }

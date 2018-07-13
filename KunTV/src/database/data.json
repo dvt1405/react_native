@@ -16,7 +16,7 @@
             "address":  "Ha noi - Viet Nam",
             "kind": "Movie",
             "rate": 2,
-            "distance": "0.23"
+            "distance": "0.33"
         },
         {
             "id" : "3",
@@ -25,7 +25,7 @@
             "address":  "Ha noi - Viet Nam",
             "kind": "Movie",
             "rate": 3,
-            "distance": "0.23"
+            "distance": "2.23"
         },
         {
             "id" : "4",
@@ -34,7 +34,7 @@
             "address":  "Ha noi - Viet Nam",
             "kind": "Movie",
             "rate": 4,
-            "distance": "0.23"
+            "distance": "5.23"
         }
     ]
 }

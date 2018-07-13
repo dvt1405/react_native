@@ -7,7 +7,7 @@ export const HomeStack = createStackNavigator({
     Home_Screen: {
         screen: Home,
         navigationOptions: {
-            header: <HeaderTitle title = "Movie"/>,
+            header: <HeaderTitle title = "Cinema"/>,
             headerStyle: {
                 backgroundColor: '#DDDADF',
                 height: 50
