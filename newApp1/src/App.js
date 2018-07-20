@@ -15,7 +15,7 @@ const Navigation = createStackNavigator({
     navigationOptions: ({navigation}) => (
       {title: 'Comics'}
     )
-  },
+  }, 
   ComicDetail: {
     screen: ComicDetail
   }

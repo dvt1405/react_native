@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import {
-  Text,
-  View,
-  Image,
-  FlatList
+  FlatList,
+  Dimensions
 } from 'react-native';
-
+import ScaledImage from './ScaledImage'
 class ComicDetail extends Component {
   state = {  }
-  _renderItem = ({item}) => <Image style={{height: 300}} source ={{uri: item}}/>
+  static navigationOptions = ({navigation}) => {
+    return {
+      title: navigation.state.params.comic.title
+    }
+  }
+  _renderItem = ({item}) => <ScaledImage uri = {item} width={Dimensions.get('window').width}/>
   _keyExtractor = (item, index) => item
   render() {
     return (
