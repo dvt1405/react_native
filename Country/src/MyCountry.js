@@ -13,17 +13,19 @@ class MyCountry extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Image
-                    source={{ uri: `https://www.countryflags.io/${this.state.data.alpha2Code}/flat/64.png` }}
-                    style={styles.img}
-                />
-                <View style = {styles.infor}>
-                    <Text style ={styles.text}>Country:  {this.state.data.name}</Text>
-                    <Text style ={styles.text}>Capital:  {this.state.data.capital}</Text>
-                    <Text style ={styles.text}>Subregion:    {this.state.data.subregion}</Text>
-                    <Text style ={styles.text}>Population:   {this.state.data.population}</Text>
-                    <Text style ={styles.text}>Area:   {this.state.data.area} km2</Text>
-                </ View>
+                <View style={styles.frame}>
+                    <Image
+                        source={{ uri: `https://www.countryflags.io/${this.state.data.alpha2Code}/flat/64.png` }}
+                        style={styles.img}
+                    />
+                    <View style={styles.infor}>
+                        <Text style={styles.text}>Country:  {this.state.data.name}</Text>
+                        <Text style={styles.text}>Capital:  {this.state.data.capital}</Text>
+                        <Text style={styles.text}>Subregion:    {this.state.data.subregion}</Text>
+                        <Text style={styles.text}>Population:   {this.state.data.population}</Text>
+                        <Text style={styles.text}>Area:   {this.state.data.area} km2</Text>
+                    </ View>
+                </View>
             </View>
         );
     }
@@ -39,13 +41,22 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: '#8F4BFC'
     },
     infor: {
-        justifyContent: 'flex-start',
-        alignItems: 'flex-start',
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     text: {
         fontSize: 16
+    },
+    frame: {
+        width: window_width*0.8,
+        height: window_width*0.8,
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 1000,
+        backgroundColor: 'white'
     }
 })
 export default MyCountry;

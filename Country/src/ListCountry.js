@@ -42,21 +42,22 @@ class ListCountry extends Component {
     }
     render() {
         return (
-            <View>
-                <ActivityIndicator animating={this.state.refreshing} color='#0000ff'/>
+            <View style = {styles.container}>
+                {/* <ActivityIndicator animating={this.state.refreshing} color='#0000ff'/> */}
                 <FlatList
                     data={this.state.data}
                     extraData={this.state}
-                    renderItem={({ item, index }) => <TouchableOpacity
-                        onPress={() => {
-                            this.props.navigation.navigate('Detail', { CountryDetail: this.state.data[index] })
-                        }}
-                    >
-                        <View style={styles.item}>
-                            <Text>{index + 1}: </Text>
-                            <Text>{item.name}</Text>
-                        </View>
-                    </TouchableOpacity>}
+                    renderItem={({ item, index }) =>
+                        <TouchableOpacity
+                            onPress={() => {
+                                this.props.navigation.navigate('Detail', { CountryDetail: this.state.data[index] })
+                            }}
+                        >
+                            <View style={styles.item}>
+                                <Text>{index + 1}: </Text>
+                                <Text>{item.name}</Text>
+                            </View>
+                        </TouchableOpacity>}
                     keyExtractor={(item, index) => index.toString()}
                     refreshControl={
                         <RefreshControl
@@ -70,6 +71,9 @@ class ListCountry extends Component {
     }
 }
 const styles = StyleSheet.create({
+    container: {
+        flex: 1
+    },
     item: {
         flexDirection: 'row',
         alignItems: 'center',
