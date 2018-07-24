@@ -61380,6 +61380,8 @@ __d(function (global, _require, module, exports, _dependencyMap) {
               wasLoaded: false
             });
           });
+        }).catch(function (error) {
+          return _reactNative.Alert.alert('Fail to search a city!', 'Please enter other city!');
         });
       }, _this._onCPress = function () {
         _this.setState({
@@ -61414,7 +61416,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
             style: styles.container,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 62
+              lineNumber: 66
             }
           },
           _react3.default.createElement(_SearchBox2.default, {
@@ -61424,7 +61426,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
             onPress: this.onSearchPress,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 63
+              lineNumber: 67
             }
           }),
           _react3.default.createElement(_BigItem2.default, {
@@ -61434,7 +61436,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
             temp: this.state.temp,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 69
+              lineNumber: 73
             }
           }),
           _react3.default.createElement(_List2.default, {
@@ -61442,13 +61444,13 @@ __d(function (global, _require, module, exports, _dependencyMap) {
             temp: this.state.temp,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 75
+              lineNumber: 79
             }
           })
         ) : _react3.default.createElement(_reactNative.ActivityIndicator, {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 79
+            lineNumber: 83
           }
         });
       }

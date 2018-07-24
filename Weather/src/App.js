@@ -41,7 +41,11 @@ export default class App extends Component {
             ? this.setState({ wasLoaded: true })
             : this.setState({ wasLoaded: false })
         })
-      })
+      }).catch((error) =>
+        Alert.alert(
+          'Fail to search a city!',
+          'Please enter other city!'
+        ))
   }
   _onCPress = () => {
     this.setState({ temp: 1 })
