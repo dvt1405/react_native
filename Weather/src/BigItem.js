@@ -18,6 +18,7 @@ class BigItem extends Component {
         clouds: require('./img/clouds.png'),
         snow: require('./img/snow.png'),
         clear: require('./img/clear.png'),
+        onpressed: true
 
     }
     render() {
@@ -48,17 +49,21 @@ class BigItem extends Component {
                                 : new BigNumber((this.props.data.temp.day - 273) * 1.8 + 32).toFormat(2).toString()}
                         </Text>
                         <View style={[styles.img_view]}>
-                        <TouchableOpacity
-                            onPress={this.props.onPress1}
-                        >
-                            <Text style={styles.main_text}>°C</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                            onPress={this.props.onPress2}
-                        >
-                            <Text style={styles.main_text}>°F</Text>
-                        </TouchableOpacity>
-                    </View>
+                            <TouchableOpacity
+                                onPress={this.props.onPress1}
+                            >
+                                <Text style={[styles.main_text, { opacity: this.props.temp == 1 ? 1 : 0.5 }]}>
+                                    °C
+                                </Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity
+                                onPress={this.props.onPress2}
+                            >
+                                <Text style={[styles.main_text, { opacity: this.props.temp == 2 ? 1 : 0.5 }]}>
+                                    °F
+                                </Text>
+                            </TouchableOpacity>
+                        </View>
                     </View>
                 </View>
                 <View style={styles.img_view}>
@@ -101,7 +106,6 @@ const styles = StyleSheet.create({
     temp_text: {
         fontSize: 40,
         color: '#fff',
-        // opacity: this.props.temp == 1 ? 0.5 : 1
     },
     main_text: {
         fontSize: 25,

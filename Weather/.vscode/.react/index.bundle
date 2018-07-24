@@ -62079,7 +62079,8 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                 rain: _require(_dependencyMap[4], './img/rain.png'),
                 clouds: _require(_dependencyMap[5], './img/clouds.png'),
                 snow: _require(_dependencyMap[6], './img/snow.png'),
-                clear: _require(_dependencyMap[7], './img/clear.png')
+                clear: _require(_dependencyMap[7], './img/clear.png'),
+                onpressed: true
             }, _temp), _possibleConstructorReturn(_this, _ret);
         }
 
@@ -62092,7 +62093,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                         style: styles.container,
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 25
+                            lineNumber: 26
                         }
                     },
                     _react3.default.createElement(
@@ -62101,7 +62102,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                             style: styles.img_view,
                             __source: {
                                 fileName: _jsxFileName,
-                                lineNumber: 26
+                                lineNumber: 27
                             }
                         },
                         _react3.default.createElement(
@@ -62113,7 +62114,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                                 },
                                 __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 27
+                                    lineNumber: 28
                                 }
                             },
                             _react3.default.createElement(_reactNative.Image, {
@@ -62121,7 +62122,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                                 source: this.props.data.weather[0].main.toString().toLowerCase() == 'rain' ? this.state.rain : this.props.data.weather[0].main.toString().toLowerCase() == 'clouds' ? this.state.clouds : this.props.data.weather[0].main.toString().toLowerCase() == 'snow' ? this.state.snow : this.props.data.weather[0].main.toString().toLowerCase() == 'clear' ? this.state.clear : '',
                                 __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 28
+                                    lineNumber: 29
                                 }
                             }),
                             _react3.default.createElement(
@@ -62129,7 +62130,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                                 {
                                     __source: {
                                         fileName: _jsxFileName,
-                                        lineNumber: 40
+                                        lineNumber: 41
                                     }
                                 },
                                 _react3.default.createElement(
@@ -62138,7 +62139,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                                         style: styles.main_text,
                                         __source: {
                                             fileName: _jsxFileName,
-                                            lineNumber: 41
+                                            lineNumber: 42
                                         }
                                     },
                                     this.props.data.weather[0].main
@@ -62154,7 +62155,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                                 },
                                 __source: {
                                     fileName: _jsxFileName,
-                                    lineNumber: 44
+                                    lineNumber: 45
                                 }
                             },
                             _react3.default.createElement(
@@ -62163,7 +62164,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                                     style: styles.temp_text,
                                     __source: {
                                         fileName: _jsxFileName,
-                                        lineNumber: 45
+                                        lineNumber: 46
                                     }
                                 },
                                 this.props.temp == 1 ? new _bignumber2.default(this.props.data.temp.day - 273).toFormat(2).toString() : new _bignumber2.default((this.props.data.temp.day - 273) * 1.8 + 32).toFormat(2).toString()
@@ -62174,7 +62175,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                                     style: [styles.img_view],
                                     __source: {
                                         fileName: _jsxFileName,
-                                        lineNumber: 50
+                                        lineNumber: 51
                                     }
                                 },
                                 _react3.default.createElement(
@@ -62183,16 +62184,18 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                                         onPress: this.props.onPress1,
                                         __source: {
                                             fileName: _jsxFileName,
-                                            lineNumber: 51
+                                            lineNumber: 52
                                         }
                                     },
                                     _react3.default.createElement(
                                         _reactNative.Text,
                                         {
-                                            style: styles.main_text,
+                                            style: [styles.main_text, {
+                                                opacity: this.props.temp == 1 ? 1 : 0.5
+                                            }],
                                             __source: {
                                                 fileName: _jsxFileName,
-                                                lineNumber: 54
+                                                lineNumber: 55
                                             }
                                         },
                                         "\xB0C"
@@ -62204,16 +62207,18 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                                         onPress: this.props.onPress2,
                                         __source: {
                                             fileName: _jsxFileName,
-                                            lineNumber: 56
+                                            lineNumber: 59
                                         }
                                     },
                                     _react3.default.createElement(
                                         _reactNative.Text,
                                         {
-                                            style: styles.main_text,
+                                            style: [styles.main_text, {
+                                                opacity: this.props.temp == 2 ? 1 : 0.5
+                                            }],
                                             __source: {
                                                 fileName: _jsxFileName,
-                                                lineNumber: 59
+                                                lineNumber: 62
                                             }
                                         },
                                         "\xB0F"
@@ -62226,7 +62231,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                         style: styles.img_view,
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 64
+                            lineNumber: 69
                         }
                     })
                 );
