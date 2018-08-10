@@ -1,0 +1,72 @@
+{
+    "categories": [
+        {
+            "id": 0,
+            "name": "Length",
+            "units": [
+                {
+                    "id": 0,
+                    "name": "Meter",
+                    "ratio": 1
+                },
+                {
+                    "id": 1,
+                    "name": "Decimeter",
+                    "ratio": 0.1
+                },
+                {
+                    "id": 2,
+                    "name": "Centimeter",
+                    "ratio": 0.01
+                },
+                {
+                    "id": 3,
+                    "name": "Milimeter",
+                    "ratio": 0.001
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "name": "Weight",
+            "units": [
+                {
+                    "id": 0,
+                    "name": "Kilogram",
+                    "ratio": 1
+                },
+                {
+                    "id": 1,
+                    "name": "Gram",
+                    "ratio": 0.001
+                },
+                {
+                    "id": 2,
+                    "name": "Ton",
+                    "ratio": 1000
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Currency",
+            "units": [
+                {
+                    "id": 0,
+                    "name": "VND",
+                    "ratio": 1
+                },
+                {
+                    "id": 1,
+                    "name": "USD",
+                    "ratio": 22000
+                },
+                {
+                    "id": 2,
+                    "name": "EUR",
+                    "ratio": 28000
+                }
+            ]
+        }
+    ]
+}
